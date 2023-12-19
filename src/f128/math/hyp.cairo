@@ -50,9 +50,16 @@ mod Tests {
     use option::OptionTrait;
     use traits::Into;
 
+#[cfg(test)]
+mod tests {
+    use option::OptionTrait;
+    use traits::Into;
+
     use cubit::f128::test::helpers::assert_precise;
-    use cubit::f128::types::fixed::{FixedTrait, FixedInto, FixedPartialEq, ONE, ONE_u128};
-    use super::{cosh, acosh, asinh, atanh, tanh, sinh};
+    use cubit::f128::types::fixed::{FixedInto, FixedPartialEq, ONE};
+
+    use super::{FixedTrait, cosh, ONE_u128, sinh, tanh, acosh, asinh, atanh};
+
     #[test]
     #[available_gas(10000000)]
     fn test_cosh() {

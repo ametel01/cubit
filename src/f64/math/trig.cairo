@@ -204,11 +204,16 @@ fn _sin_loop(a: Fixed, i: u64, acc: Fixed) -> Fixed {
 mod Tests {
     use traits::Into;
 
+#[cfg(test)]
+mod tests {
+    use traits::Into;
+
     use cubit::f64::test::helpers::{assert_precise, assert_relative};
-    use cubit::f64::types::fixed::{FixedTrait, FixedPartialEq, FixedPrint, ONE};
+    use cubit::f64::types::fixed::{FixedPartialEq, FixedPrint};
 
     use super::{
-        acos, acos_fast, asin, atan, atan_fast, cos, cos_fast, HALF_PI, PI, sin, sin_fast, tan
+        FixedTrait, acos, ONE, HALF_PI, PI, acos_fast, atan_fast, atan, asin, cos, cos_fast, sin,
+        sin_fast, tan
     };
 
     #[test]

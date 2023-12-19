@@ -54,6 +54,14 @@ mod Tests {
     use cubit::f128::types::fixed::FixedPrint;
     use cubit::f128::types::fixed::{Fixed, FixedTrait, ONE_u128};
 
+#[cfg(test)]
+mod tests {
+    use cubit::f128::procgen::rand;
+    use cubit::f128::test::helpers::assert_precise;
+    use cubit::f128::types::fixed::FixedPrint;
+
+    use super::{FixedTrait};
+
     #[test]
     #[available_gas(200000000)]
     fn test_u128_between() {
@@ -147,7 +155,6 @@ mod Tests {
         assert(min <= 2, 'min should be at most 2');
         assert(max >= 8, 'max should be at least 8');
     }
-
 
     #[test]
     #[available_gas(1000000000)]

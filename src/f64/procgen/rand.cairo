@@ -55,6 +55,14 @@ mod Tests {
     use cubit::f64::test::helpers::assert_precise;
     use cubit::f64::types::fixed::FixedPrint;
 
+#[cfg(test)]
+mod tests {
+    use cubit::f64::procgen::rand;
+    use cubit::f64::test::helpers::assert_precise;
+    use cubit::f64::types::fixed::FixedPrint;
+
+    use super::FixedTrait;
+
     #[test]
     #[available_gas(200000000)]
     fn test_u64_between() {
@@ -148,7 +156,6 @@ mod Tests {
         assert(min <= 2, 'min should be at most 2');
         assert(max >= 8, 'max should be at least 8');
     }
-
 
     #[test]
     #[available_gas(1000000000)]

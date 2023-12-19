@@ -446,7 +446,11 @@ mod Tests {
     use cubit::f128::math::{core, hyp, trig};
     use cubit::f64::{Fixed as Fixed64, FixedTrait as FixedTrait64, ONE as ONE_u64};
 
-    use super::{FixedTrait, HALF, ONE, ONE_u128, PackFixed};
+#[cfg(test)]
+mod tests {
+    use cubit::f128::test::helpers::assert_precise;
+
+    use super::{FixedTrait, core, ONE, HALF, Fixed64, ONE_u128, PackFixed, ONE_u64};
 
     #[test]
     #[available_gas(10000000)]

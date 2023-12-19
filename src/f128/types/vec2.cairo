@@ -141,7 +141,11 @@ mod Tests {
     use cubit::f128::test::helpers::assert_precise;
     use cubit::f128::types::FixedTrait;
 
-    use super::Vec2Trait;
+#[cfg(test)]
+mod tests {
+    use cubit::f128::test::helpers::assert_precise;
+
+    use super::{Vec2Trait, FixedTrait};
 
     #[test]
     fn test_add() {

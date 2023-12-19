@@ -174,6 +174,12 @@ mod Tests {
     use cubit::f128::types::FixedTrait;
     use super::{Vec4Trait};
 
+#[cfg(test)]
+mod tests {
+    use cubit::f128::test::helpers::assert_precise;
+
+    use super::{Vec4Trait, FixedTrait};
+
     #[test]
     fn test_add() {
         let a = Vec4Trait::new(

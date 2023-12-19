@@ -288,6 +288,16 @@ mod Tests {
         abs, add, exp2_int, eq, ne, neg
     };
 
+#[cfg(test)]
+mod tests {
+    use cubit::f64::math::trig::{PI, HALF_PI};
+    use cubit::f64::test::helpers::{assert_precise, assert_relative};
+
+    use super::{
+        FixedTrait, ONE, round, floor, sqrt, ceil, lut, exp, exp2, exp2_int, pow, log10, log2, ln,
+        eq, ne, add, Fixed
+    };
+
     #[test]
     fn test_into() {
         let a = FixedTrait::new_unscaled(5, false);

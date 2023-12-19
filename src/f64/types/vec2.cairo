@@ -142,6 +142,12 @@ mod Tests {
     use cubit::f64::types::fixed::FixedTrait;
     use super::Vec2Trait;
 
+#[cfg(test)]
+mod tests {
+    use cubit::f64::test::helpers::assert_precise;
+
+    use super::{Vec2Trait, FixedTrait};
+
     #[test]
     fn test_add() {
         let a = Vec2Trait::new(FixedTrait::new(1, false), FixedTrait::new(2, false));

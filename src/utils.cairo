@@ -19,10 +19,10 @@ fn felt_abs(a: felt252) -> felt252 {
     }
 }
 
-
 #[cfg(test)]
-mod Tests {
-    use super::{felt_abs, felt_sign};
+mod tests {
+    use super::{felt_sign, felt_abs};
+
     #[test]
     fn test_sign() {
         let min = -1809251394333065606848661391547535052811553607665798349986546028067936010240;

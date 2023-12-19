@@ -154,6 +154,13 @@ mod Tests {
     use cubit::f128::types::vec3::{Vec3, Vec3Trait};
     use cubit::f128::types::vec4::{Vec4, Vec4Trait};
 
+#[cfg(test)]
+mod tests {
+    use cubit::f128::procgen::simplex3;
+    use cubit::f128::test::helpers::assert_precise;
+
+    use super::{Vec3, Vec3Trait, FixedTrait};
+
     #[test]
     #[available_gas(5000000)]
     fn test_simplex3_1() {

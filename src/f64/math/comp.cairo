@@ -22,6 +22,12 @@ mod Tests {
     use cubit::f64::types::fixed::{FixedTrait, FixedPartialEq};
     use super::{max, min};
 
+#[cfg(test)]
+mod tests {
+    use cubit::f64::types::fixed::FixedPartialEq;
+
+    use super::{FixedTrait, max, min};
+
     #[test]
     fn test_max() {
         let a = FixedTrait::new_unscaled(1, false);

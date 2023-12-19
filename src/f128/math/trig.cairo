@@ -210,14 +210,16 @@ fn _sin_loop(a: Fixed, i: u128, acc: Fixed) -> Fixed {
 mod Tests {
     use traits::Into;
 
+#[cfg(test)]
+mod tests {
+    use traits::Into;
+
     use cubit::f128::test::helpers::{assert_precise, assert_relative};
     use cubit::f128::types::fixed::{ONE, FixedInto, FixedPartialEq, FixedPrint};
-    use cubit::f128::types::fixed::{
-        Fixed, FixedTrait, FixedAdd, FixedSub, FixedMul, FixedDiv, ONE_u128
-    };
+
     use super::{
-        acos, atan_fast, acos_fast, asin, asin_fast, atan, cos, cos_fast, HALF_PI_u128, PI_u128,
-        sin, sin_fast, tan, tan_fast
+        FixedTrait, ONE_u128, acos, atan_fast, atan, asin, sin, HALF_PI_u128, cos, PI_u128,
+        cos_fast, sin_fast, tan
     };
 
     #[test]

@@ -172,6 +172,12 @@ mod Tests {
     use cubit::f64::test::helpers::assert_precise;
     use super::Vec3Trait;
 
+#[cfg(test)]
+mod tests {
+    use cubit::f64::test::helpers::assert_precise;
+
+    use super::{Vec3Trait, FixedTrait};
+
     #[test]
     fn test_add() {
         let a = Vec3Trait::new(

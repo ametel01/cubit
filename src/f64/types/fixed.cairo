@@ -426,9 +426,10 @@ impl PackFixed of StorePacking<Fixed, felt252> {
     }
 }
 
+
 #[cfg(test)]
-mod Tests {
-    use cubit::f128::{Fixed as Fixed128, FixedTrait, ONE_u128};
+mod tests {
+    use super::{FixedTrait, Fixed128, ONE_u128};
 
     #[test]
     fn test_into_f128() {

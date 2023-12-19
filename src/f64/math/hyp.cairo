@@ -46,9 +46,14 @@ mod Tests {
     use option::OptionTrait;
     use traits::Into;
 
+#[cfg(test)]
+mod tests {
+    use option::OptionTrait;
+    use traits::Into;
+
     use cubit::f64::test::helpers::assert_precise;
-    use cubit::f64::types::fixed::{Fixed, FixedTrait, HALF, ONE, TWO};
-    use super::{acosh, asinh, cosh, sinh, tanh, atanh};
+
+    use super::{FixedTrait, TWO, cosh, sinh, ONE, tanh, acosh, asinh, atanh, HALF};
 
     #[test]
     #[available_gas(10000000)]

@@ -153,6 +153,13 @@ mod Tests {
     use cubit::f64::types::fixed::{Fixed, FixedTrait, HALF, TWO};
     use super::Vec3Trait;
 
+#[cfg(test)]
+mod tests {
+    use cubit::f64::procgen::simplex3;
+    use cubit::f64::test::helpers::assert_precise;
+
+    use super::{Vec3Trait, FixedTrait, HALF};
+
     #[test]
     #[available_gas(5000000)]
     fn test_simplex3_1() {

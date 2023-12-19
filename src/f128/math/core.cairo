@@ -312,10 +312,17 @@ mod Tests {
         FixedMulEq, ONE_u128
     };
 
+#[cfg(test)]
+mod tests {
+    use cubit::f128::test::helpers::assert_precise;
+    use cubit::f128::types::fixed::{
+        ONE, HALF, FixedPartialEq, FixedPartialOrd, FixedAddEq, FixedSub, FixedSubEq, FixedMulEq
+    };
+
     use cubit::f128::math::trig::HALF_PI_u128;
     use cubit::f128::math::trig::PI_u128;
 
-    use super::{div, exp2_int, lut};
+    use super::{FixedTrait, ONE_u128, lut, exp2_int};
 
     #[test]
     fn test_into() {
